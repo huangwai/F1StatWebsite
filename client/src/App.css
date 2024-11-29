@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,35 @@
 
 .read-the-docs {
   color: #888;
+/* } */
+
+.App {
+  background-color: #ffffff;
+  height: 100%;
+  /* overflow: hidden; */
+  background-repeat: no-repeat;
+  font-family: "Montserrat", sans-serif;
+}
+#root {
+  height: 100%;
+  background-color: #ffffff;
+
+  /* overflow: hidden; */
+  font-family: "Montserrat", sans-serif;
+}
+html,
+body {
+  /* height: 100%; */
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
