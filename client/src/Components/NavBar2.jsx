@@ -68,7 +68,7 @@ export default function ResponsiveAppBar() {
                   textDecoration: "none",
                 }}
               >
-                F1StatWebsite
+                Apex Insights
               </Typography>
 
               <Box
@@ -151,7 +151,7 @@ export default function ResponsiveAppBar() {
                   pl: 2,
                 }}
               >
-                F1StatWebsite
+                Apex Insights
               </Typography>
               <Box
                 sx={{
