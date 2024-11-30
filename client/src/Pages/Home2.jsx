@@ -38,10 +38,10 @@ const images = [
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: "relative",
-  height: 300,
+  height: 200,
   [theme.breakpoints.down("sm")]: {
     width: "100% !important", // Overrides inline-style
-    height: 100,
+    height: 200,
   },
   "&:hover, &.Mui-focusVisible": {
     zIndex: 1,
@@ -105,8 +105,28 @@ export default function Home2() {
     // <FadeInSection key={image}>
     <Box
       // className='album'
-      sx={{ display: "flex", flexWrap: "wrap", minWidth: 300, width: "auto" }}
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        minWidth: "100vw",
+        width: "auto",
+        minHeight: "100vh",
+        backgroundImage: `url(${Background})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "50vh", // Make sure the background covers the entire viewport
+        // bgcolor: "red",
+        // height: "auto",
+      }}
     >
+      {/* <Typography
+        sx={{ color: "white", position: "relative" }}
+        variant="h3"
+        gutterBottom
+      >
+        {" "}
+        The Pinnacle of Motorsports Racing
+      </Typography> */}
       {/* <img
         src={`../images/albumcovers/heroimg2.jpg?w=164&h=164&fit=crop&auto=format`}
         srcSet={`../images/albumcovers/heroimg2.jpg?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
@@ -116,7 +136,7 @@ export default function Home2() {
         margin = 'auto'
         loading="lazy"
       /> */}
-      {images.map((image, index) => (
+      {/* {images.map((image, index) => (
         <ImageButton
           focusRipple
           key={image.title}
@@ -139,7 +159,6 @@ export default function Home2() {
           <ImageBackdrop className="MuiImageBackdrop-root" />
 
           <Image loading="lazy">
-            {/* <FadeInSection key={image}> */}
             <Typography
               component="span"
               variant="subject1"
@@ -157,10 +176,9 @@ export default function Home2() {
               {image.title}
               <ImageMarked className="MuiImageMarked-root" />
             </Typography>
-            {/* </FadeInSection> */}
           </Image>
         </ImageButton>
-      ))}
+      ))} */}
     </Box>
   );
 }

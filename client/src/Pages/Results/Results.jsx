@@ -7,7 +7,6 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { getResult } from "../../APIs/ResultsApi";
-import { Link } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
 
 const Teams = () => {
@@ -43,11 +42,13 @@ const Teams = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
-      <h2>{param} Formula 1 Results</h2>
+    <div style={{ marginTop: 90, marginBottom: 90 }}>
+      <h2 style={{ color: "white", textAlign: "center" }}>
+        {param} Formula 1 Results
+      </h2>
       <ul>
         <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <Table sx={{ minWidth: "90vw" }} aria-label="simple table">
             <TableHead>
               <TableRow>
                 <TableCell>GRAND PRIX</TableCell>

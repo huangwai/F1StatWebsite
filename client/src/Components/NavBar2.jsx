@@ -43,14 +43,15 @@ export default function ResponsiveAppBar() {
       <ScrollToHide threshold={0}>
         <AppBar
           sx={{
-            bgcolor: "#FF1E00",
+            bgcolor: "transparent",
             mx: "auto",
             whiteSpace: "normal",
+            bgcolor: "rgb(212,212,212, .2)",
           }}
           position="fixed"
         >
           <Container maxWidth="xl">
-            <Toolbar sx={{ bgcolor: "#FF1E00", mx: "auto" }} disableGutters>
+            <Toolbar sx={{ mx: "auto" }} disableGutters>
               <Typography
                 variant="h3"
                 noWrap
@@ -63,7 +64,7 @@ export default function ResponsiveAppBar() {
                   fontWeight: 700,
                   letterSpacing: ".3rem",
                   color: "inherit",
-                  fontSize: "30px",
+                  fontSize: { md: "20px", lg: "30px" },
                   textDecoration: "none",
                 }}
               >
@@ -72,7 +73,7 @@ export default function ResponsiveAppBar() {
 
               <Box
                 sx={{
-                  bgcolor: "#FF1E00",
+                  bgcolor: "none",
                   flexGrow: 1,
                   display: { xs: "flex", md: "none" },
                 }}
@@ -119,7 +120,10 @@ export default function ResponsiveAppBar() {
                           color: "black",
                           display: "block",
                           fontSize: "15px",
+                          fontWeight: "bold",
                           paddingInlineStart: 2,
+                          minWidth: "100vw",
+                          textAlign: "left",
                         }}
                       >
                         {page}
@@ -141,7 +145,7 @@ export default function ResponsiveAppBar() {
                   fontWeight: 700,
                   letterSpacing: ".3rem",
                   color: "inherit",
-                  fontSize: "18px",
+                  fontSize: { xs: "20px", sm: "25px" },
                   textDecoration: "none",
 
                   pl: 2,
@@ -164,7 +168,8 @@ export default function ResponsiveAppBar() {
                       my: 2,
                       color: "white",
                       display: "block",
-                      fontSize: "15px",
+                      fontSize: { sm: "10px", md: "13px", lg: "20px" },
+                      fontWeight: "bold",
                       paddingInlineStart: 2,
                     }}
                   >

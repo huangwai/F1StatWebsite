@@ -49,15 +49,17 @@ const Drivers = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
-      <h2>{param} Formula 1 Driver Standings</h2>
+    <div style={{ marginTop: 90, marginBottom: 90 }}>
+      <h2 style={{ color: "white", textAlign: "center" }}>
+        {param} Formula 1 Driver Standings
+      </h2>
       <ul>
         {/* {drivers.map((driver, index) => (
           <li key={index}>
             {driver.permanentNumber}: {driver.givenName} {driver.familyName}
           </li> */}
         <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <Table sx={{ minWidth: "90vw" }} aria-label="simple table">
             <TableHead>
               <TableRow>
                 <TableCell>POS</TableCell>

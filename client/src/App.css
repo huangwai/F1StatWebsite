@@ -42,15 +42,19 @@
 /* } */
 
 .App {
-  background-color: #ffffff;
+  background-color: #2b2a2a;
   height: 100%;
   /* overflow: hidden; */
   background-repeat: no-repeat;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: EMprint-Light, Univers Next W23 Light, Tahoma W01 Regular,
+    Saral W60, AxisStd-Light, MHei HK Medium, MHei PRC Medium, Ergo LT W08,
+    YDGothic_120 Pro, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue,
+    Helvetica, Arial, Lucida Grande, sans-serif;
 }
 #root {
-  height: 100%;
-  background-color: #ffffff;
+  height: 100vh;
+  background-color: #2b2a2a;
 
   /* overflow: hidden; */
   font-family: "Montserrat", sans-serif;
@@ -60,14 +64,23 @@ body {
   /* height: 100%; */
   margin: 0;
   padding: 0;
-  color: #000000;
-  font-family: "Montserrat", sans-serif;
+  color: #2b2a2a;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: EMprint-Light, Univers Next W23 Light, Tahoma W01 Regular,
+    Saral W60, AxisStd-Light, MHei HK Medium, MHei PRC Medium, Ergo LT W08,
+    YDGothic_120 Pro, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue,
+    Helvetica, Arial, Lucida Grande, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   word-wrap: break-word;
   word-break: break-word;
+  min-width: 90vw;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace; */
+  font-family: EMprint-Light, Univers Next W23 Light, Tahoma W01 Regular,
+    Saral W60, AxisStd-Light, MHei HK Medium, MHei PRC Medium, Ergo LT W08,
+    YDGothic_120 Pro, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue,
+    Helvetica, Arial, Lucida Grande, sans-serif;
 }

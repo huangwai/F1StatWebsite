@@ -4,9 +4,12 @@ import { colors } from "@mui/material";
 
 export default function DataAnalysis() {
   return (
-    <div>
-      <h2 style={{ textAlign: "center" }}>2024 Driver Point Comparision</h2>
+    <div style={{ marginTop: 90, marginBottom: 90 }}>
+      <h2 style={{ color: "white", textAlign: "center" }}>
+        2024 Driver Point Comparision
+      </h2>
       <LineChart
+        sx={{ color: "white" }}
         xAxis={[
           {
             data: [

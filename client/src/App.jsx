@@ -31,7 +31,9 @@ function App() {
     <div className="App">
       {/* <NavBar /> OLD */}
       <ResponsiveAppBar onClick={handleDriverClick} />
-      <div style={{ marginTop: 90, marginBottom: 90 }}>
+      <div
+      // style={{ marginTop: 90, marginBottom: 90 }}
+      >
         <BrowserRouter>
           <Routes>
             {/* user should be welcomed by the home page */}

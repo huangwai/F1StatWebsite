@@ -43,11 +43,13 @@ const Teams = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
-      <h2>{param} Formula 1 Schedule</h2>
+    <div style={{ marginTop: 90, marginBottom: 90 }}>
+      <h2 style={{ color: "white", textAlign: "center" }}>
+        {param} Formula 1 Schedule
+      </h2>
       <ul>
         <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <Table sx={{ minWidth: "90vw" }} aria-label="simple table">
             <TableHead>
               <TableRow>
                 <TableCell>ROUND</TableCell>
