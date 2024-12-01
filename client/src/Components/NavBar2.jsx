@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ScrollToHide from "./ScrollToHide";
 import AnimationError from "../Pages/Error/AnimationError";
-
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 const pages = ["Drivers", "Teams", "Results", "Schedule", "Analysis"];
 
 export default function ResponsiveAppBar() {
@@ -46,7 +46,7 @@ export default function ResponsiveAppBar() {
             bgcolor: "transparent",
             mx: "auto",
             whiteSpace: "normal",
-            bgcolor: "rgb(212,212,212, .2)",
+            // bgcolor: "rgb(212,212,212, .2)",
           }}
           position="fixed"
         >
@@ -60,7 +60,7 @@ export default function ResponsiveAppBar() {
                 sx={{
                   mr: 2,
                   display: { xs: "none", md: "flex" },
-                  fontFamily: "monospace",
+                  fontFamily: "Titillium Web",
                   fontWeight: 700,
                   letterSpacing: ".3rem",
                   color: "inherit",
@@ -68,7 +68,7 @@ export default function ResponsiveAppBar() {
                   textDecoration: "none",
                 }}
               >
-                F1StatWebsite
+                Apex Insights
               </Typography>
 
               <Box
@@ -76,6 +76,7 @@ export default function ResponsiveAppBar() {
                   bgcolor: "none",
                   flexGrow: 1,
                   display: { xs: "flex", md: "none" },
+                  //   bgcolor: "red",
                 }}
               >
                 <IconButton
@@ -106,6 +107,7 @@ export default function ResponsiveAppBar() {
                   onClose={handleCloseNavMenu}
                   sx={{
                     display: { xs: "block", md: "none" },
+                    // textAlign: "Left",
                   }}
                 >
                   {pages.map((page) => (
@@ -120,13 +122,20 @@ export default function ResponsiveAppBar() {
                           color: "black",
                           display: "block",
                           fontSize: "15px",
+                          fontFamily: "Titillium Web",
+                          fontWeight: 500,
                           fontWeight: "bold",
                           paddingInlineStart: 2,
                           minWidth: "100vw",
-                          textAlign: "left",
+                          textAlign: "Left",
+
+                          bgcolor: "transparent",
                         }}
                       >
                         {page}
+                        <ArrowForwardIosIcon
+                          sx={{ fontSize: "medium", color: "black" }}
+                        />
                       </Button>
                     </MenuItem>
                   ))}
@@ -141,7 +150,7 @@ export default function ResponsiveAppBar() {
                   mr: 2,
                   display: { xs: "flex", md: "none" },
                   flexGrow: 1,
-                  fontFamily: "monospace",
+                  fontFamily: "Titillium Web",
                   fontWeight: 700,
                   letterSpacing: ".3rem",
                   color: "inherit",
@@ -151,7 +160,7 @@ export default function ResponsiveAppBar() {
                   pl: 2,
                 }}
               >
-                F1StatWebsite
+                Apex Insights
               </Typography>
               <Box
                 sx={{
@@ -168,8 +177,10 @@ export default function ResponsiveAppBar() {
                       my: 2,
                       color: "white",
                       display: "block",
-                      fontSize: { sm: "10px", md: "13px", lg: "20px" },
+                      fontSize: { sm: "10px", md: "15px", lg: "18px" },
                       fontWeight: "bold",
+                      fontFamily: "Titillium Web",
+                      fontWeight: 500,
                       paddingInlineStart: 2,
                     }}
                   >
@@ -177,7 +188,7 @@ export default function ResponsiveAppBar() {
                   </Button>
                 ))}
               </Box>
-              <AnimationError />
+              {/* <AnimationError /> */}
             </Toolbar>
           </Container>
         </AppBar>

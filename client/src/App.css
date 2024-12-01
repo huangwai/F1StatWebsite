@@ -40,24 +40,25 @@
 .read-the-docs {
   color: #888;
 /* } */
-
+@import "@fontsource/titillium-web";
 .App {
   background-color: #2b2a2a;
   height: 100%;
   /* overflow: hidden; */
   background-repeat: no-repeat;
   /* font-family: "Montserrat", sans-serif; */
-  font-family: EMprint-Light, Univers Next W23 Light, Tahoma W01 Regular,
-    Saral W60, AxisStd-Light, MHei HK Medium, MHei PRC Medium, Ergo LT W08,
-    YDGothic_120 Pro, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue,
-    Helvetica, Arial, Lucida Grande, sans-serif;
+  font-family: "Titillium Web", EMprint-Light, Univers Next W23 Light,
+    Tahoma W01 Regular, Saral W60, AxisStd-Light, MHei HK Medium,
+    MHei PRC Medium, Ergo LT W08, YDGothic_120 Pro, HelveticaNeue-Light,
+    Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande,
+    sans-serif;
 }
 #root {
   height: 100vh;
   background-color: #2b2a2a;
 
   /* overflow: hidden; */
-  font-family: "Montserrat", sans-serif;
+  font-family: "Titillium Web", "Montserrat", sans-serif;
 }
 html,
 body {
@@ -66,10 +67,11 @@ body {
   padding: 0;
   color: #2b2a2a;
   /* font-family: "Montserrat", sans-serif; */
-  font-family: EMprint-Light, Univers Next W23 Light, Tahoma W01 Regular,
-    Saral W60, AxisStd-Light, MHei HK Medium, MHei PRC Medium, Ergo LT W08,
-    YDGothic_120 Pro, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue,
-    Helvetica, Arial, Lucida Grande, sans-serif;
+  font-family: "Titillium Web", EMprint-Light, Univers Next W23 Light,
+    Tahoma W01 Regular, Saral W60, AxisStd-Light, MHei HK Medium,
+    MHei PRC Medium, Ergo LT W08, YDGothic_120 Pro, HelveticaNeue-Light,
+    Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   word-wrap: break-word;
@@ -79,8 +81,9 @@ body {
 code {
   /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace; */
-  font-family: EMprint-Light, Univers Next W23 Light, Tahoma W01 Regular,
-    Saral W60, AxisStd-Light, MHei HK Medium, MHei PRC Medium, Ergo LT W08,
-    YDGothic_120 Pro, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue,
-    Helvetica, Arial, Lucida Grande, sans-serif;
+  font-family: "Titillium Web", EMprint-Light, Univers Next W23 Light,
+    Tahoma W01 Regular, Saral W60, AxisStd-Light, MHei HK Medium,
+    MHei PRC Medium, Ergo LT W08, YDGothic_120 Pro, HelveticaNeue-Light,
+    Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande,
+    sans-serif;
 }

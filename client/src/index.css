@@ -1,12 +1,15 @@
+@import "@fontsource/titillium-web";
+
 body {
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif; */
-  font-family: EMprint-Light, Univers Next W23 Light, Tahoma W01 Regular,
-    Saral W60, AxisStd-Light, MHei HK Medium, MHei PRC Medium, Ergo LT W08,
-    YDGothic_120 Pro, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue,
-    Helvetica, Arial, Lucida Grande, sans-serif;
+  font-family: "Titillium Web", EMprint-Light, Univers Next W23 Light,
+    Tahoma W01 Regular, Saral W60, AxisStd-Light, MHei HK Medium,
+    MHei PRC Medium, Ergo LT W08, YDGothic_120 Pro, HelveticaNeue-Light,
+    Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color: rgb(246 244 240 / var(--tw-bg-opacity, 1)); */
@@ -16,9 +19,10 @@ body {
 code {
   /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace; */
-  font-family: EMprint-Light, Univers Next W23 Light, Tahoma W01 Regular,
-    Saral W60, AxisStd-Light, MHei HK Medium, MHei PRC Medium, Ergo LT W08,
-    YDGothic_120 Pro, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue,
-    Helvetica, Arial, Lucida Grande, sans-serif;
+  font-family: "Titillium Web", EMprint-Light, Univers Next W23 Light,
+    Tahoma W01 Regular, Saral W60, AxisStd-Light, MHei HK Medium,
+    MHei PRC Medium, Ergo LT W08, YDGothic_120 Pro, HelveticaNeue-Light,
+    Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande,
+    sans-serif;
   background-color: #2b2a2a;
 }
