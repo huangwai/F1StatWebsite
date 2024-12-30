@@ -20,7 +20,9 @@ export const getDrivers = async (season) => {
 // Example function to get drivers info
 export const getDriversInfo = async (name) => {
   try {
-    const response = await axios.get(`${BASE_URL}/ergast/f1/drivers/${name}`);
+    const response = await axios.get(`${BASE_URL}/ergast/f1/drivers/${name}`, {
+      cache: "no-store",
+    });
     return response.data; // Return API response data
   } catch (error) {
     console.error("Error fetching standings:", error);
