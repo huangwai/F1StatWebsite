@@ -40,9 +40,13 @@
 .read-the-docs {
   color: #888;
 /* } */
+
+.Background {
+  background-image: "./Pictures/pixbyhuynh-483.jpg";
+}
 @import "@fontsource/titillium-web";
 .App {
-  background-color: #2b2a2a;
+  background-color: inherit;
   height: 100%;
   /* overflow: hidden; */
   background-repeat: no-repeat;
@@ -55,7 +59,7 @@
 }
 #root {
   height: 100vh;
-  background-color: #2b2a2a;
+  background-color: inherit;
 
   /* overflow: hidden; */
   font-family: "Titillium Web", "Montserrat", sans-serif;

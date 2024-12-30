@@ -13,7 +13,15 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ScrollToHide from "./ScrollToHide";
 import AnimationError from "../Pages/Error/AnimationError";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-const pages = ["Drivers", "Teams", "Results", "Schedule", "Analysis"];
+// const pages = ["Drivers", "Teams", "Results", "Schedule", "Analysis"];
+
+const pages2 = [
+  { id: "drivers", name: "Drivers" },
+  { id: "teams", name: "Teams" },
+  { id: "results/1", name: "Results" },
+  { id: "schedule", name: "Schedule" },
+  { id: "analysis", name: "Analysis" },
+];
 
 export default function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -43,7 +51,7 @@ export default function ResponsiveAppBar() {
       <ScrollToHide threshold={0}>
         <AppBar
           sx={{
-            bgcolor: "transparent",
+            bgcolor: "transparent", //CHANGES
             mx: "auto",
             whiteSpace: "normal",
             // bgcolor: "rgb(212,212,212, .2)",
@@ -110,11 +118,11 @@ export default function ResponsiveAppBar() {
                     // textAlign: "Left",
                   }}
                 >
-                  {pages.map((page) => (
+                  {pages2.map((page) => (
                     <MenuItem key={page} onClick={handleCloseNavMenu}>
                       <Button
-                        href={`/${page}/${currentYear}`}
-                        key={page}
+                        href={`/${currentYear}/${page.id}`}
+                        key={page.id}
                         onClick={handleCloseNavMenu}
                         sx={{
                           textAlign: "center",
@@ -128,13 +136,20 @@ export default function ResponsiveAppBar() {
                           paddingInlineStart: 2,
                           minWidth: "100vw",
                           textAlign: "Left",
-
+                          minWidth: "100vw",
                           bgcolor: "transparent",
                         }}
                       >
-                        {page}
+                        {page.name}
                         <ArrowForwardIosIcon
-                          sx={{ fontSize: "medium", color: "black" }}
+                          sx={{
+                            fontSize: "medium",
+                            color: "black",
+                            alignItems: "right", // Center content vertically
+                            justifyContent: "right", // Center content horizontally
+                            textAlign: "right",
+                            alignContent: "right",
+                          }}
                         />
                       </Button>
                     </MenuItem>
@@ -168,10 +183,10 @@ export default function ResponsiveAppBar() {
                   display: { xs: "none", md: "flex" },
                 }}
               >
-                {pages.map((page) => (
+                {pages2.map((page) => (
                   <Button
-                    href={`/${page}/${currentYear}`}
-                    key={page}
+                    href={`/${currentYear}/${page.id}`}
+                    key={page.id}
                     onClick={handleCloseNavMenu}
                     sx={{
                       my: 2,
@@ -184,7 +199,7 @@ export default function ResponsiveAppBar() {
                       paddingInlineStart: 2,
                     }}
                   >
-                    {page}
+                    {page.name}
                   </Button>
                 ))}
               </Box>

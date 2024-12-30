@@ -11,33 +11,33 @@ import { Button } from "@mui/material";
 // import Hero from './albums/Home';
 const currentYear = new Date().getFullYear();
 
-const images = [
-  {
-    url: "../Pictures/weridpic.png",
-    title: "Drivers",
-    link: `/drivers/${currentYear}`,
-  },
-  {
-    url: "../assets/pixbyhuynh-483.jpg",
-    title: "Teams",
-    link: `/teams/${currentYear}`,
-  },
-  {
-    url: "../assets/pixbyhuynh-483.jpg",
-    title: "Results",
-    link: `/results/${currentYear}`,
-  },
-  {
-    url: "../assets/pixbyhuynh-483.jpg",
-    title: "Schedule",
-    link: `/schedule/${currentYear}`,
-  },
-  {
-    url: "../assets/pixbyhuynh-483.jpg",
-    title: "Data Analysis",
-    link: `/analysis/${currentYear}`,
-  },
-];
+// const images = [
+//   {
+//     url: "../Pictures/weridpic.png",
+//     title: "Drivers",
+//     link: `/drivers/${currentYear}`,
+//   },
+//   {
+//     url: "../assets/pixbyhuynh-483.jpg",
+//     title: "Teams",
+//     link: `/teams/${currentYear}`,
+//   },
+//   {
+//     url: "../assets/pixbyhuynh-483.jpg",
+//     title: "Results",
+//     link: `/results/${currentYear}`,
+//   },
+//   {
+//     url: "../assets/pixbyhuynh-483.jpg",
+//     title: "Schedule",
+//     link: `/schedule/${currentYear}`,
+//   },
+//   {
+//     url: "../assets/pixbyhuynh-483.jpg",
+//     title: "Data Analysis",
+//     link: `/analysis/${currentYear}`,
+//   },
+// ];
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: "relative",
@@ -105,87 +105,39 @@ const ImageMarked = styled("span")(({ theme }) => ({
 
 export default function Home2() {
   return (
-    // <FadeInSection key={image}>
     <div>
       {" "}
       <Box
-        // className='album'
         sx={{
           display: "flex",
-          flexWrap: "wrap",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+          gap: 2, // Spacing between items
+          // flexWrap: "wrap",
           minWidth: "100vw",
-          width: "auto",
-          minHeight: "100vh",
           backgroundImage: `url(${Background})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          minHeight: "100vh", // Make sure the background covers the entire viewport
           opacity: 0.5,
         }}
-      >
-        {/* <img
-        src={`../images/albumcovers/heroimg2.jpg?w=164&h=164&fit=crop&auto=format`}
-        srcSet={`../images/albumcovers/heroimg2.jpg?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-        alt={"Hero Image"}
-        height = 'auto'
-        width = 'auto'
-        margin = 'auto'
-        loading="lazy"
-      /> */}
-        {/* {images.map((image, index) => (
-        <ImageButton
-          focusRipple
-          key={image.title}
-          style={{
-            width: "100vw",
-            border: "none",
-          }}
-          href={image.link}
-        >
-          <ImageSrc
-            style={{
-              backgroundImage: `url(${Background})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover", // Ensures the image covers the container
-              backgroundAttachment: "fixed", // Makes the background static
-              backgroundPosition: "center", // Centers the image
-            }}
-          />
-
-          <ImageBackdrop className="MuiImageBackdrop-root" />
-
-          <Image loading="lazy">
-            <Typography
-              component="span"
-              variant="subject1"
-              color="inherit"
-              outline="none"
-              border="none"
-              sx={{
-                position: "relative",
-                p: 4,
-                pt: 2,
-                outline: "none",
-                pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
-              }}
-            >
-              {image.title}
-              <ImageMarked className="MuiImageMarked-root" />
-            </Typography>
-          </Image>
-        </ImageButton>
-      ))} */}
-      </Box>
+      ></Box>
       <Typography
         sx={{
           color: "white",
           position: "fixed",
+          margin: "auto",
+          px: "1vw",
           fontFamily: "Titillium Web",
           fontWeight: 500,
           bottom: "60vh",
           width: "100vw",
           textAlign: "center",
           fontSize: { xs: "30px", sm: "50px", lg: "70px" },
+          display: "flex", // Enable flexbox for content alignment
+          alignItems: "center", // Center content vertically
+          justifyContent: "center", // Center content horizontally
         }}
         variant="h3"
         gutterBottom
@@ -197,13 +149,18 @@ export default function Home2() {
         sx={{
           color: "white",
           position: "fixed",
+          px: "10vw",
           fontFamily: "Titillium Web",
           fontWeight: 300,
-          bottom: "50vh",
+          bottom: "51vh",
           width: "100vw",
           alignContent: "center",
           textAlign: "center",
+          color: "white",
           fontSize: { xs: "15px", sm: "20px", lg: "25px" },
+          display: "flex", // Enable flexbox for content alignment
+          alignItems: "center", // Center content vertically
+          justifyContent: "center", // Center content horizontally
         }}
         variant="h3"
         gutterBottom
@@ -216,22 +173,27 @@ export default function Home2() {
       <Button
         sx={{
           color: "white",
-          position: "fixed",
+          margin: "auto",
           fontFamily: "Titillium Web",
           fontWeight: 500,
-          bottom: "40vh",
-          width: "100vw",
+          bottom: "45vh",
+          width: "30%",
           alignContent: "center",
           textAlign: "center",
-          color: "white",
-          // hover: "white",
-          // bgcolor: " white",
           fontSize: { xs: "15px", sm: "20px", lg: "30px" },
+          display: "flex", // Enable flexbox for content alignment
+          alignItems: "center", // Center content vertically
+          justifyContent: "center", // Center content horizontally
+          backgroundColor: "rgba(255, 255, 255, 0.3)", // Semi-transparent background
+          border: "1px solid white", // Border remains fully opaque
+          "&:hover": {
+            backgroundColor: "rgba(255, 255, 255, 0.2)", // Slightly less transparent on hover
+          },
         }}
-        href={`/drivers/${currentYear}`}
-        variant="text"
+        href={`/${currentYear}/drivers`}
+        variant="outlined"
       >
-        Learn More!
+        Learn More
       </Button>
     </div>
   );

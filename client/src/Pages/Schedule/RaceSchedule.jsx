@@ -9,12 +9,19 @@ import Paper from "@mui/material/Paper";
 import { getSchedule } from "../../APIs/ScheduleApi";
 import { Link } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
+import Box from "@mui/material/Box";
+import { Grid2, Typography } from "@mui/material";
+import FilterValues from "../../Components/Filter";
+import { dataYears, sections } from "../../Data/Data";
+import FilterSeason from "../../Components/FilterSeason";
 
 const Teams = () => {
   const [race, setRace] = useState([]); //set array for drivers
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  //get Driver ID from URL path
+  const Season = location.pathname.split("/")[2];
   //get Driver ID from URL path
   //const Season = location.pathname.split("/")[2];
   // console.log("param2", Season);
@@ -44,6 +51,13 @@ const Teams = () => {
 
   return (
     <div style={{ marginTop: 90, marginBottom: 90 }}>
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid2 container spacing={2}>
+          <Grid2 item xs>
+            <FilterSeason data={dataYears.name} urlPath={"Schedule"} />
+          </Grid2>
+        </Grid2>
+      </Box>
       <h2 style={{ color: "white", textAlign: "center" }}>
         {param} Formula 1 Schedule
       </h2>
@@ -78,8 +92,15 @@ const Teams = () => {
                       {driverStanding.Driver.familyName}
                     </Link> */}
                   </TableCell>
-                  <TableCell align="left">
+                  <TableCell
+                    align="left"
+                    sx={{ cursor: "pointer", textDecoration: "underline" }}
+                  >
                     Formula 1 {races.raceName} {param}
+                    {/* <Link href={driverStanding.Driver.url}>
+                      {driverStanding.Driver.givenName}{" "}
+                      {driverStanding.Driver.familyName}
+                    </Link> */}
                   </TableCell>
                   <TableCell align="left">
                     {races.Circuit.circuitName}

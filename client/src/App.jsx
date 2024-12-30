@@ -20,6 +20,9 @@ import Results from "./Pages/Results/Results";
 import DriverInfo from "./Pages/Driver/DriverInfo";
 import Home2 from "./Pages/Home2";
 import ResponsiveAppBar from "./Components/NavBar2";
+import DriverStandings from "./Pages/Results/DriverStandigs";
+import DriverResults from "./Pages/Driver/DriverResults";
+import TeamResults from "./Pages/Teams/TeamResults";
 function App() {
   const currentYear = new Date().getFullYear();
 
@@ -39,20 +42,48 @@ function App() {
             {/* user should be welcomed by the home page */}
             <Route path="/" element={<Home2 />}></Route>
             {/* Routes to the F1 Drivers page */}
-            <Route path="drivers/:param" element={<Drivers />}></Route>
-            <Route path="drivers/info/:param" element={<DriverInfo />}></Route>
+            {/* <Route path="/drivers/:param" element={<Drivers />}></Route> */}
+            <Route path="/:param/drivers" element={<Drivers />}></Route>
+            <Route
+              path="/:year/drivers/info/:drivername"
+              element={<DriverInfo />}
+            ></Route>
+
+            <Route
+              path="/:year/result/:driverid"
+              element={<DriverResults />}
+            ></Route>
 
             {/* Routes to the F1 Teams Page */}
-            <Route path="teams/:param" element={<Teams />}></Route>
+            {/* <Route path="teams/:param" element={<Teams />}></Route> */}
+            {/* Routes to the F1 Teams Page */}
+            <Route path="/:param/teams" element={<Teams />}></Route>
+
+            {/* Will show the constructor results for a specified season */}
+            <Route
+              path="/:year/teams/result/:constructorid"
+              element={<TeamResults />}
+            ></Route>
+
+            {/* Routes to the F1 Results page */}
+            <Route path="/:param/results/:round" element={<Results />}></Route>
+            {/* Will show specified season race results */}
+            <Route path="/:param/races/:round" element={<Results />}></Route>
+            <Route path="/:param/results/teams" element={<Teams />}></Route>
+            <Route
+              path="/:param/results/drivers"
+              element={<DriverStandings />}
+            ></Route>
+            <Route
+              path="/:param/results/fastest-laps"
+              element={<Results />}
+            ></Route>
 
             {/* Routes to the F1 Race Schedule page */}
-            <Route path="results/:param" element={<Results />}></Route>
-
-            {/* Routes to the F1 Race Schedule page */}
-            <Route path="schedule/:param" element={<RaceSchedule />}></Route>
+            <Route path="/:param/schedule" element={<RaceSchedule />}></Route>
 
             {/* Routes to the Race Data Analysis Page */}
-            <Route path="analysis/:param" element={<DataAnalysis />}></Route>
+            <Route path="/:param/analysis" element={<DataAnalysis />}></Route>
 
             {/* if user enters incorrect url, it takes them to the Error page */}
             <Route path="*" element={<ErrorPage />}></Route>
