@@ -37,7 +37,10 @@ export const getDriverStandings = async (season) => {
     const response = await axios.get(
       `${BASE_URL}/ergast/f1/${season}/driverstandings`,
       {
-        cache: "no-store",
+        headers: {
+          // Remove If-None-Match or set it explicitly
+          "If-None-Match": "",
+        },
       }
     );
     console.log("DRIVERAPI: ", response.data);
