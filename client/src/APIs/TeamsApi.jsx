@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
 // Base URL of the Jolpica F1 API
-const BASE_URL = "/api";
+// const BASE_URL = "/api";
+const BASE_URL = "https://api.jolpi.ca";
 
 // Example function to get standings
 export const getTeamStandings = async (season) => {

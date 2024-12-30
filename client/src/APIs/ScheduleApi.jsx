@@ -2,7 +2,8 @@ import axios from "axios";
 import React from "react";
 
 // Base URL of the Jolpica F1 API
-const BASE_URL = "/api";
+// const BASE_URL = "/api";
+const BASE_URL = "https://api.jolpi.ca";
 
 // Example function to get Results
 export const getSchedule = async (season) => {
