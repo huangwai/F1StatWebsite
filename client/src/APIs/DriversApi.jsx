@@ -4,7 +4,8 @@
 import axios from "axios";
 
 // Base URL of the Jolpica F1 API
-const BASE_URL = "/api";
+// const BASE_URL = "/api";
+const BASE_URL = "https://api.jolpi.ca";
 
 // Example function to get standings
 export const getDrivers = async (season) => {
@@ -33,7 +34,7 @@ export const getDriversInfo = async (name) => {
 export const getDriverStandings = async (season) => {
   try {
     const response = await axios.get(
-      `https://api.jolpi.ca/ergast/f1/${season}/driverstandings?cache_bust=${Date.now()}`
+      `${BASE_URL}/ergast/f1/${season}/driverstandings?cache_bust=${Date.now()}`
     );
     console.log("DRIVERAPI: ", response.data);
     return response.data; // Return API response data
