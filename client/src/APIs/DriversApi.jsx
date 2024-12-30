@@ -35,6 +35,7 @@ export const getDriverStandings = async (season) => {
     const response = await axios.get(
       `${BASE_URL}/ergast/f1/${season}/driverstandings`
     );
+    console.log("DRIVERAPI: ", response.data);
     return response.data; // Return API response data
   } catch (error) {
     console.error("Error fetching standings:", error);
