@@ -9,6 +9,12 @@ export default defineConfig({
         target: "http://api.jolpi.ca",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
+        configure: (proxy, options) => {
+          proxy.on("proxyRes", (proxyRes) => {
+            proxyRes.headers["Cache-Control"] = "no-store";
+            proxyRes.headers["Pragma"] = "no-cache";
+          });
+        },
       },
     },
   },
