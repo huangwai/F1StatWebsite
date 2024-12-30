@@ -35,7 +35,10 @@ export const getDriversInfo = async (name) => {
 export const getDriverStandings = async (season) => {
   try {
     const response = await axios.get(
-      `${BASE_URL}/ergast/f1/${season}/driverstandings`
+      `${BASE_URL}/ergast/f1/${season}/driverstandings`,
+      {
+        cache: "no-store",
+      }
     );
     console.log("DRIVERAPI: ", response.data);
     return response.data; // Return API response data
